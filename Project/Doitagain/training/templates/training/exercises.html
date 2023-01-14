@@ -1,0 +1,14 @@
+{% extends 'training/base.html' %}
+
+{% block content %}
+<h2>Предлагаемые упражнения:</h2>
+<ul>
+    {% for j in exercises %}
+    <li>
+        <h2>{{j.title}}</h2>
+        <p>{{j.description|linebreaks}}</p>
+        <hr>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}
