@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 class Exercises(models.Model):
     title = models.CharField(max_length=255)
@@ -9,6 +10,8 @@ class Exercises(models.Model):
     def __str__(self):
         return self.title
 
+    def get_absolute_urls(self):
+        return reverse('show_exercises', kwargs={'exercises_id': self.pk})
 
 # class Training(models.Models):
 #     title = models.CharField(max_length=255)

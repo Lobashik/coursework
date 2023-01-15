@@ -5,7 +5,7 @@
 <ul>
     {% for j in exercises %}
     <li>
-        <h2>{{j.title}}</h2>
+        <h2><a href="{{ j.get_absolute_urls }}">{{j.title}}</a></h2>
         <p>{{j.description|linebreaks}}</p>
         <hr>
     </li>
