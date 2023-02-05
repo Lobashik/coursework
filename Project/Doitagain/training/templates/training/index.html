@@ -1,5 +1,54 @@
 {% extends 'training/base.html' %}
 
 {% block content %}
-<p>Приветствуем Вас на нашем сайте Do it again!</p>
+<div class="container">
+    <div class="popular__wrapper">
+        <h2>
+            Popular exercises
+        </h2>
+    </div>
+    <nav class="navigation">
+        <a class="exercise" href="#">
+            <div class="photo__exercise">
+                <img src="/assets/images/exercises/legs/squats with barbell front.png" alt="">
+            </div>
+            <div class="about__exercise">
+                <div class="name__exercise">
+                    Barbell Squat
+                </div>
+                <div class="text__exercise">
+                    The barbell squat is one of the main power exercises, used for building muscle mass and strength in the quads.
+                </div>
+            </div>
+            <div class="rating__exercise">
+                <div class="photo__star"></div>
+                <div class="photo__star"></div>
+                <div class="photo__star"></div>
+                <div class="photo__star"></div>
+                <div class="photo__star"></div>
+            </div>
+        </a>
+        <hr>
+        <a class="exercise" href="#">
+            <div class="photo__exercise">
+                <img src="/assets/images/exercises/back/lat pulldown up.png" alt="">
+            </div>
+            <div class="about__exercise">
+                <div class="name__exercise">
+                    Lat Pulldown
+                </div>
+                <div class="text__exercise">
+                    This is ont of the classic body building exercises for building and sculpting the lats (back muscles).
+                </div>
+            </div>
+            <div class="rating__exercise">
+                <div class="photo__star"></div>
+                <div class="photo__star"></div>
+                <div class="photo__star"></div>
+                <div class="photo__star"></div>
+                <div class="photo__star"></div>
+            </div>
+        </a>
+    </nav>
+</div>
 {% endblock content %}

@@ -13,7 +13,7 @@ menu = [{'title': "Главная страница", 'url_name': 'home'},
 
 
 def index(request):
-    return render(request, 'training/index.html', {'menu': menu, 'title': 'Главная станица'})
+    return render(request, 'training/index.html', {'menu': menu, 'title': 'Fitness for you'})
 
 def about(request):
     return render(request, 'training/about.html', {'menu': menu, 'title': 'О сайте'})
