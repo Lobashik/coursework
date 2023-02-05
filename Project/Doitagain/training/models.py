@@ -15,7 +15,7 @@ class Exercise(models.Model):
         return reverse('show_exercises', kwargs={'exercises_id': self.pk})
 
 class Training(models.Model):
-    title = models.CharField(max_length=255)
+    train_name = models.CharField(max_length=255)
     content = models.TextField(blank=True)
     time_created = models.DateTimeField(auto_now_add=True)
     time_update = models.DateTimeField(auto_now=True)
