@@ -19,7 +19,7 @@ def about(request):
     return render(request, 'training/about.html', {'menu': menu, 'title': 'О сайте'})
 
 def exercises(request):
-    exercises = Exercises.objects.all()
+    exercises = Exercise.objects.all()
     context = {
         'menu': menu, 
         'exercises': exercises, 
