@@ -1,0 +1,41 @@
+{% extends 'training/base.html' %}
+
+
+{% block content %}
+<div class="login_container" id="profile">
+    <div class="log_in">
+        <h2>Информация о Вас</h2>
+    </div>
+    <div class="line">
+        <label for="username">Логин: </label>
+        <label type="text" id="username" name="username"> {{login}}
+    </div>
+    <div class="line">
+        <label for="username">Имя:</label>
+        <label type="text" id="username" name="username"> {{name}}
+    </div>
+    <div class="line">
+        <label for="username">Фамилия:</label>
+        <label type="text" id="username" name="username"> {{last_name}}
+    </div>
+    <div class="line">
+        <label for="username">Дата рождения:</label>
+        <label type="text" id="username" name="username"> {{date_of_birth}}
+    </div>
+    <div class="line">
+        <label for="username">Почта:</label>
+        <label type="text" id="username" name="username"> {{email}}
+    </div>
+    <div class="line">
+        <label for="username">Вес:</label>
+        <label type="text" id="username" name="username"> {{weight}}
+    </div>
+    <div class="line">
+        <label for="username">Рост:</label>
+        <label type="text" id="username" name="username"> {{height}}
+    </div>
+    <button class="btn__log_in">
+        <a href="{% url 'logout' %}"><h3>Выйти</h3></a>
+    </button>
+</div>
+{% endblock content %}

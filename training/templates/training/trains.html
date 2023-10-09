@@ -1,0 +1,29 @@
+{% extends 'training/base.html' %}
+
+{% block content %}
+{% if request.user.is_authenticated %}
+<div class="container_index">
+    <div class="popular__wrapper">
+        <h3>Предлагаемые тренировки:</h3>
+    </div>
+    <nav class="navigation">
+        {% for tren in trains %}
+            <a class="exercise_index" href="{{tren.get_absolute_urls}}">
+                <div class="about__exercise">
+                    <div class="name__exercise">
+                        {{tren.train_name}}
+                    </div>
+                    <div class="text__exercise">
+                        {{tren.content|linebreaks|truncatewords:30}}
+                    </div>
+                </div>
+            </a>
+            <hr>
+        {% endfor %}
+    </nav>
+</div>
+<div> <a href="/add_train/">Добавить тренировку</a></div>
+{% else %}
+<div class="container_index">Для того, чтобы увидеть свои тренировки, выполните вход</div>
+{% endif %}
+{% endblock content %}

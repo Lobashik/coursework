@@ -1,0 +1,23 @@
+{% extends 'training/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="login_container" id="add_train">
+    <div class="log_in">
+        <h2>Новая тренировка</h2>
+    </div>
+    <form action="{% url 'add_train' %}" method="post">
+        {% csrf_token %}
+        <div class="line"><label class="form-label" for="{{ form.train_name.id_for_label }}">{{ form.train_name.label }}</label>{{ form.train_name }}</div>
+        <div class="form-error">{{ form.train_name.errors }}</div>
+        <div class="line"><label class="form-label" for="{{ form.slug.id_for_label }}">{{ form.slug.label }}</label>{{ form.slug }}</div>
+        <div class="form-error">{{ form.slug.errors }}</div>
+        <div class="line"><label class="form-label" for="{{ form.content.id_for_label }}">{{ form.content.label }}</label>{{ form.content }}</div>
+        <div class="form-error">{{ form.context.errors }}</div>
+        <div class="line"><label class="form-label" for="{{ form.exercises.id_for_label }}">{{ form.exercises.label }}</label>{{ form.exercises }}</div>
+        <div class="form-error">{{ form.exercises.errors }}</div>
+        <button class="btn__register"><h3>Добавить</h3></button>
+    </form>
+</div>
+<script type="text/javascript" src={% static 'training/js/autoslug.js' %} /></script>
+{% endblock content %}

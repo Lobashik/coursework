@@ -1,0 +1,118 @@
+{% extends 'training/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container_exercises">
+        <div class="exercises_groups-container" id="muscle_groups">
+            <div class="exercises-container__name">
+                <h2>Группа мышц</h2>
+            </div>
+            <dl class="exercises-container__list" multiple>
+                {% for muscle in muscle_group %}
+                <dt class="muscle_group" id="{{muscle.id}}">
+                    {{muscle.muscles_name}}
+                </dt>
+                {% endfor %}
+            </dl>
+        </div>
+        <div class="exercises-container" id="chest">
+            <div class="exercises-container__name">
+                <h2>{{title}}</h2>
+            </div>
+            <dl class="exercises-container__list" multiple>
+                {% for ex in chest %}
+                    <a class="exercise_index" href="{{ex.get_absolute_urls}}">
+                        <dt class="exercise_exercises">
+                            {{ex.title}}
+                        </dt>
+                    </a>
+                {% endfor %}
+            </dl>
+            <button class="exercises-container__backbutton" id="backbutton_chest">
+                <h3>Назад</h3>
+            </button>
+        </div>
+        <div class="exercises-container" id="legs">
+            <div class="exercises-container__name">
+                <h2>{{title}}</h2>
+            </div>
+            <dl class="exercises-container__list" multiple>
+                {% for ex in legs %}
+                    <a class="exercise_index" href="{{ex.get_absolute_urls}}">
+                        <dt class="exercise_exercises">
+                            {{ex.title}}
+                        </dt>
+                    </a>
+                {% endfor %}
+            </dl>
+            <button class="exercises-container__backbutton" id="backbutton_legs">
+                <h3>Назад</h3>
+            </button>
+        </div>
+        <div class="exercises-container" id="abdominals">
+            <div class="exercises-container__name">
+                <h2>{{title}}</h2>
+            </div>
+            <dl class="exercises-container__list" multiple>
+                {% for ex in abdominals %}
+                    <a class="exercise_index" href="{{ex.get_absolute_urls}}">
+                        <dt class="exercise_exercises">
+                            {{ex.title}}
+                        </dt>
+                    </a>
+                {% endfor %}
+            </dl>
+            <button class="exercises-container__backbutton" id="backbutton_abdominals">
+                <h3>Назад</h3>
+            </button>
+        </div>
+        <div class="exercises-container" id="arms">
+            <div class="exercises-container__name">
+                <h2>{{title}}</h2>
+            </div>
+            <dl class="exercises-container__list" multiple>
+                {% for ex in arms %}
+                    <a class="exercise_index" href="{{ex.get_absolute_urls}}">
+                        <dt class="exercise_exercises">
+                            {{ex.title}}
+                        </dt>
+                    </a>
+                {% endfor %}
+            </dl>
+            <button class="exercises-container__backbutton" id="backbutton_arms">
+                <h3>Назад</h3>
+            </button>
+        </div>
+        <div class="exercises-container" id="back">
+            <div class="exercises-container__name">
+                <h2>{{title}}</h2>
+            </div>
+            <dl class="exercises-container__list" multiple>
+                {% for ex in back %}
+                    <a class="exercise_index" href="{{ex.get_absolute_urls}}">
+                        <dt class="exercise_exercises">
+                            {{ex.title}}
+                        </dt>
+                    </a>
+                {% endfor %}
+            </dl>
+            <button class="exercises-container__backbutton" id="backbutton_back">
+                <h3>Назад</h3>
+            </button>
+        </div>
+        <div class="exercise_view-container">
+            <div class="exercise_view__name">
+                <h2>{{exercise.title}}</h2>
+            </div>
+            <div class="exercise_view-wrapper">
+                <div class="exercise_view__photo">
+                    <img src="{{exercise.muscles_photo.url}}">
+                </div>
+                <div class="exercise_view__text">
+                    {{exercise.description}}
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src={% static 'training/js/exercises.js' %} /></script>
+{% endblock content %}

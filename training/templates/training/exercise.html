@@ -1,0 +1,39 @@
+{% extends 'training/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container_exercises">
+        <div class="exercises-container_exercise">
+            <div class="exercises-container__name">
+                <h2>{{muscle}}</h2>
+            </div>
+            <dl class="exercises-container__list" multiple>
+                {% for ex in muscles_group %}
+                    <a class="exercise_index" href="{{ex.get_absolute_urls}}">
+                        <dt class="exercise_exercises">
+                            {{ex.title}}
+                        </dt>
+                    </a>
+                {% endfor %}
+            </dl>
+            <button class="exercises-container__backbutton" id="backbutton_chest">
+                <!-- хотелось бы обратную ссылку через js -->
+                <a onclick="javascript:history.back(); return false;"><h3>Назад</h3></a>
+                <!-- <a href="/exercises/"><h3>Назад</h3></a> -->
+            </button>
+        </div>
+        <div class="exercise_view-container">
+            <div class="exercise_view__name">
+                <h2>{{exercise.title}}</h2>
+            </div>
+            <div class="exercise_view-wrapper">
+                <div class="exercise_view__photo">
+                    <img src="{{exercise.muscles_photo.url}}">
+                </div>
+                <div class="exercise_view__text">
+                    {{exercise.description}}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

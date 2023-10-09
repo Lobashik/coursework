@@ -1,0 +1,27 @@
+{% extends 'training/base.html' %}
+
+{% block content %}
+<div class="container_index">
+    <div class="popular__wrapper">
+        <h3>Популярные упражнения</h3>
+    </div>
+    <nav class="navigation">
+        {% for ex in popular_exercises %}
+            <a class="exercise_index" href="{{ex.get_absolute_urls}}">
+                <div class="photo__exercise">
+                    <img src="{{ex.muscles_photo.url}}">
+                </div>
+                <div class="about__exercise">
+                    <div class="name__exercise">
+                        {{ex.title}}
+                    </div>
+                    <div class="text__exercise">
+                        {{ex.description|linebreaks|truncatewords:10}}
+                    </div>
+                </div>
+            </a>
+            <hr>
+        {% endfor %}
+    </nav>
+</div>
+{% endblock content %}

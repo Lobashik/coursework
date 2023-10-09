@@ -1,0 +1,853 @@
+body {
+    font-family: 'Varela Round', sans-serif;
+
+    font-size: 20px;
+    font-weight: 1000;
+    line-height: 1.6;
+
+    background-color: #F6F2F2;
+
+    margin: 0px;
+    padding: 0px;
+
+    width: 100%;
+    height: 100vh;
+
+    align-content: center;
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-content: space-between;
+}
+
+*,
+*:before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 46px;
+    font-weight: 600;
+    color: #97fb57;
+}
+
+h2 {
+    font-weight: 500;
+    color: #97fb57;
+}
+
+h3 {
+    font-weight: 400;
+    color: #97fb57;
+}
+
+hr {
+    width: 90%;
+    color: #909090;
+}
+
+a, u {
+    text-decoration: none;
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+
+li {
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline;
+}
+
+label {
+    width: 45%;
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#no_user {
+    height: 200px;
+}
+
+#register {
+    width: 50%;
+    display: block;
+}
+
+#add_train {
+    width: 60%;
+}
+
+#train {
+    width: 90%;
+}
+
+#profile {
+   width: 60%;
+}
+/* Intro */
+
+.intro {
+    width: 100%;
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+/* Container */
+/* index */
+
+.container_index {
+    width: 90%;
+    max-width: 1100px;
+
+    padding: 30px 0 30px 0;
+
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 12px;
+    border-color: #909090;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Mainmenu */
+
+.mainmenu {
+    width: 100%;
+    padding: 50px 50px 0px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.mainmenu__navigation {
+    width: 90%;
+    max-width: 1100px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #121212;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.mainmenu__pages{
+    font-size: 24px;
+    font-weight: 500;
+    color: #97fb57;
+}
+
+/* Wrapper */
+
+.popular__wrapper {
+    width: 95%;
+    height: 50px;
+    margin-bottom: 30px;
+
+    border-radius: 12px;
+    background-color: #121212;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Navigation */
+
+.navigation {
+    width: 95%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Exercises */
+
+.exercise_index {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+/* Photos */
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.photo__exercise {
+    width: 150px;
+    height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 12px;
+    border-color: #97fb57;
+}
+
+.photo__star {
+    background: url(../images/star_icon.png) center;
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+}
+
+/* Text */
+.about__exercise {
+    width: 100%;
+    height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.name__exercise {
+    font-size: 26px;
+    font-weight: 600;
+    color: #000000;
+
+    height: 40px;
+}
+
+.text__exercise {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+
+    width: 90%;
+    height: 110px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+/* Rating */
+
+.rating__exercise {
+    width: 140px;
+    height: 25px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Buttons */
+
+.btn__home {
+    background: url(../images/home_icon.png) center;
+    background-size: cover;
+    width: 45px;
+    height: 45px;
+}
+
+.btn__profile {
+    background: url(../images/account_icon.png) center;
+    background-size: cover;
+    width: 45px;
+    height: 45px;
+}
+
+/* Header */
+
+.header {
+    width: 100%;
+    height: 100px;
+
+    padding-left: 50px;
+    padding-right: 50px;
+
+    display: grid;
+    align-items: center;
+    
+    background-color: #121212;
+
+    border-width: 1px;
+    border-color: #000000;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    height: 100px;
+    
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+    
+    background-color: #121212;
+
+    border-width: 1px;
+    border-color: #000000;
+}
+
+.footer__inner {
+    position: relative;
+    height: 70px;
+}
+
+.footer__text {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 16px;
+    font-weight: 300;
+    color: #FFFFFF;
+}
+
+/* exercises */
+
+.container_exercises {
+    width: 90%;
+    height: 100%;
+    max-width: 1850px;
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5%;
+}
+
+.exercises_groups-container {
+    width: 35%;
+    height: 100%;
+    min-width: 360px;
+
+    padding: 30px;
+
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 12px;
+    border-color: #909090;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.exercises-container__name {
+    width: 95%;
+    height: 50px;
+    margin-bottom: 30px;
+
+    border-radius: 12px;
+    background-color: #121212;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.exercises-container__list {
+    width: 95%;
+    height: 100%;
+
+    background-color: transparent;
+    border-color: #121212;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+.exercises-container {
+    width: 35%;
+    height: 100%;
+    min-width: 360px;
+
+    padding: 30px;
+
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 12px;
+    border-color: #909090;
+
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.exercises-container_exercise {
+    width: 35%;
+    height: 100%;
+    min-width: 360px;
+
+    padding: 30px;
+
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 12px;
+    border-color: #909090;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#chest {
+    display: none;
+}
+
+#legs {
+    display: none;
+}
+
+#abdominals {
+    display: none;
+}
+
+#arms {
+    display: none;
+}
+
+#back {
+    display: none;
+}
+
+.muscle_group {
+    width: 100%;
+    height: 80px;
+
+    margin-bottom: 10px;
+
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 12px;
+    border-color: #909090;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.exercise_exercises {
+    width: 100%;
+    height: 80px;
+
+    margin-bottom: 10px;
+
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 12px;
+    border-color: #909090;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.exercise_view-container {
+    width: 65%;
+    height: 100%;
+    min-width: 600px;
+
+    padding: 30px;
+
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 12px;
+    border-color: #909090;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.exercise_view__name {
+    width: 95%;
+    margin-bottom: 30px;
+
+    border-radius: 12px;
+    background-color: #121212;
+
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Wrapper */
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 1100px;
+
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 12px;
+    border-color: #909090;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.exercise_view-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.exercise_view__photo {
+    height: 40vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exercise_view__text {
+    height: 200px;
+
+    margin-top: 10px;
+
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+
+    overflow: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Exercises */
+
+.exercises-wrapper__list {
+    width: 95%;
+    height: 100%;
+
+    background-color: transparent;
+    border-color: #121212;
+    border-radius: 12px;
+}
+
+.exercise-list:last-child {
+    margin-bottom: 0;
+}
+
+/* Buttons */
+
+.exercises-container__backbutton {
+    width: 80px;
+    height: 24px;
+    margin-top: 30px;
+
+    border-radius: 8px;
+    background-color: #121212;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Training */
+
+.training-wrapper {
+    width: 100%;
+    height: 100%;
+
+    padding: 30px;
+
+    background-color: #FFFFFF;
+
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.training-wrapper__name {
+    width: 95%;
+    height: 50px;
+    margin-bottom: 30px;
+
+    border-radius: 12px;
+    background-color: #121212;
+
+    font-size: 28px;
+    font-weight: 500;
+    color: #97fb57;
+    text-align: center;
+}
+
+.training-wrapper__list {
+    width: 95%;
+    height: 100%;
+
+    background-color: transparent;
+    border-color: #121212;
+    border-radius: 12px;
+}
+
+.training-wrapper__description {
+    width: 95%;
+    height: 100%;
+
+    border-radius: 12px;
+    border-color: #121212;
+
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.training-wrapper__savebutton {
+    width: 80px;
+    height: 24px;
+    margin-top: 30px;
+
+    border-radius: 8px;
+    background-color: #121212;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.muscles-wrapper {
+    width: 100%;
+    height: 100%;
+
+    padding: 30px;
+
+    background-color: #FFFFFF;
+    
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.muscles-wrapper__body {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.muscles-wrapper__bodyFace {
+    width: 100%;
+
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.muscles-wrapper__bodyBack {
+    width: 100%;
+
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.muscles-wrapper__muscle {
+    color: #000000;
+}
+
+.muscles-wrapper__rotatebutton {
+    width: 80px;
+    height: 24px;
+    margin-top: 30px;
+
+    border-radius: 8px;
+    background-color: #121212;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.login_container {
+    width: 40%;
+    height: auto;
+
+    padding: 30px 0 30px 0;
+
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 12px;
+    border-color: #909090;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.log_in {
+    width: 90%;
+    height: 50px;
+    margin-bottom: 1rem;
+
+    border-radius: 12px;
+    background-color: #121212;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    width: 90%;
+    height: 50px;
+    margin-bottom: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-input {
+    width: 50%;
+    display: block;
+}
+
+.btn__log_in {
+    width: 90px;
+    height: 30px;
+    margin-top: 20px;
+
+    border-radius: 8px;
+    background-color: #121212;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.btn__register {
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+
+    border-radius: 8px;
+    background-color: #121212;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.chose-exercise {
+    width: 50%;
+    overflow: auto
+}
+
+.about-text{
+    margin: 30px;
+}

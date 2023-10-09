@@ -1,0 +1,73 @@
+{% load static %}
+{% load training_tags %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link type="text/css" href="{% static 'training/css/styles.css' %}" rel="stylesheet" />
+    <link rel="shortcut icon" href="{%  static 'training/images/favicon.ico' %}">
+    <title>{{page_title}}</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <a class="btn__home" href="/"></a>
+            <h1>Do it again!</h1>
+            {% if request.user.is_authenticated %}
+                <a class="btn__profile" href="{% url 'profiles' user.pk %}"></a>
+            {% else %}
+                <a class="btn__profile" href="{% url 'login' %}"></a>
+            {% endif %}
+        </div>
+    </header>
+    <div class="mainmenu">
+        {% block mainmenu %}
+            <nav class="mainmenu__navigation">
+                {% for i in menu %}
+                    <a class="mainmenu__pages" href="{% url i.url_name %}">{{i.title}}</a>
+                {% endfor %}
+            </nav>
+        {% endblock mainmenu %}
+    </div>
+    <div class="intro">
+        {% block content %}
+        {% endblock content %}
+        {% if page_obj.has_other_pages %}
+            <nav>
+                <ul>
+                    {% if page_obj.has_previous %}
+                        <li>
+                            <a href="?page={{ page_obj.previous_page_number }}">&lt;</a>
+                        </li>
+                    {% endif %}
+                    {% for page in paginator.page_range %}
+                        {% if page_obj.number == page %}
+                            <li>{{ page }}</li>
+                        {% elif page >= page_obj.number|add:-2 and page <= page_obj.number|add:2 %}
+                            <li>
+                                <a href="?page={{ page }}">{{ page }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if page_obj.has_next %}
+                    <li>
+                        <a href="?page={{ page_obj.next_page_number }}">&gt;</a>
+                    </li>
+                {% endif %}                     
+                </ul>
+            </nav>
+        {% endif %}
+    </div>
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__text">Made by AlexGod and Lobashik</div>
+        </div>
+    </footer>
+</body>
+</html>
